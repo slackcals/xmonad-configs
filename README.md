@@ -1,2 +1,2 @@
 # xmonad_configs
-Various config files for xmonad and related applications
+This reposoitory contains various configuration files for my personal Xmonad setup.
