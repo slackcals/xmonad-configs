@@ -29,6 +29,15 @@ myManageHook = composeAll
                 , className =? "Gimp" --> doFloat <+> doShift "9:float"
             ]
 
+-- Keys
+myKeys =
+        [   
+            -- Volume Controls
+            ((0, 0x1008FF11), spawn "amixer sset Master,0 1-") 
+          , ((0, 0x1008FF12), spawn "amixer sset Master,0 toggle") 
+          , ((0, 0x1008FF13), spawn "amixer sset Master,0 1+") 
+        ]
+
 -- Key binding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
@@ -45,3 +54,5 @@ myConfig = desktopConfig
                 , manageHook = myManageHook <+> manageHook defaultConfig 
                 , logHook = updatePointer (Relative 0.99 0.99)
             }
+            `additionalKeys` myKeys
+
