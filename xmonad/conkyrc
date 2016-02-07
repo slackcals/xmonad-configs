@@ -1,0 +1,19 @@
+### Conky Display Settings 
+
+# set to yes if you want Conky to be forked in the background
+background no
+out_to_x no
+out_to_console yes
+update_interval 1
+total_run_times 0
+user_spacer none
+
+
+### Conky Output 
+
+TEXT
+${if_existing /proc/net/route eth1} SSID: ${wireless_essid eth1} Speed: ${wireless_bitrate eth1} Quality: ${wireless_link_qual_perc eth1}% ${endif} ${if_existing /proc/net/route eth0} Wired IP address: ${addr eth0} ${endif}
+
+
+
+

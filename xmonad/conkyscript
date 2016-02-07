@@ -1,0 +1,6 @@
+#!/bin/bash
+conky -c ~/.xmonad/conkyrc -i1 -q > ~/.xmonad/conkystat &
+sleep 4
+killall -q conky
+cat ~/.xmonad/conkystat
+rm ~/.xmonad/conkystat
