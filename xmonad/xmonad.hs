@@ -14,7 +14,7 @@ myBar = "xmobar"
 
 -- Custom PP, configure it as you like. It determines what is being written to 
 -- the bar.    
-myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
+myPP = xmobarPP { ppCurrent = xmobarColor "#800000" "" . wrap "<" ">" }
 
 -- Map workspaces
 myWorkspaces = [ "1:main", "2:extra_terminals", "3:browser", "4",
@@ -46,9 +46,9 @@ myConfig = desktopConfig
             { 
                   terminal    = "xfce4-terminal"
                 , modMask     = mod1Mask
-                , borderWidth        = 2
-                , normalBorderColor  = "#dddddd"
-                , focusedBorderColor = "#0000ff"
+                , borderWidth        = 3
+                , normalBorderColor  = "#333333"
+                , focusedBorderColor = "#5C0202"
                 , focusFollowsMouse = False
                 , workspaces = myWorkspaces
                 , manageHook = myManageHook <+> manageHook defaultConfig 
